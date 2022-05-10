@@ -67,11 +67,14 @@ let quizQuestions = [
     },
 ];
 
-document.addEventListener('readystatechange', () => {
-    if (document.readyState === 'interactive') {
-        init();
-    }
-});
+window.onload=function(){
+    document.addEventListener('readystatechange', () => {
+        if (document.readyState === 'interactive') {
+            init();
+        }
+    });
+}
+
 
 function init() {
     const goBackBtn = document.getElementById("goBack");
